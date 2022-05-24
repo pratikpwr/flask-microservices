@@ -1,0 +1,31 @@
+<html>
+   <head>
+	  <title> Microservice Calculator </title>
+	  <link rel="icon" type="image/png" href="/favicon.png"/>
+   </head>	  
+   <body>
+      <h1 style="text-align:center;"> Arithmetic Microservices </h1>
+      <form action="" method="POST">
+         <!-- Hint 1: What if input "first" and "second" had default values? -->
+         <p style="text-align:center;"> Enter the First number : <input type="number" step="any" name="first">
+         <br>
+         Enter the Second number: <input type="number" step="any" name="second">
+         <br> </p>
+         <p style="text-align:center;"> Enter Operation: <select id="op" name="operation">
+            <option value="add">Addition</option>
+            <option value="minus">Subtraction</option>
+            <option value="multiply">Multiplication</option>
+            <option value="divide">Division</option>
+			<option value="gcd">GCD</option>
+			<option value="lcm">LCM</option>
+			<option value="exponent">Exponent</option>
+          </select>
+         <br><br>
+         <input type="submit" name="submit_button">
+      </form>
+        {% for message in get_flashed_messages() %}
+         {{message}}
+      {% endfor %}
+	  </p>
+   </body>
+</html>
